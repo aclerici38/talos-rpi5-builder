@@ -1,13 +1,13 @@
-From 8bd03112540c5a655df51f7662aaf1d0dfc47a78 Mon Sep 17 00:00:00 2001
+From 1bf96d75e1460a88bf6fb3e54f938c459106fdd9 Mon Sep 17 00:00:00 2001
 From: Anthony Clerici <anthony@clerici.me>
 Date: Wed, 6 Aug 2025 09:42:16 -0700
 Subject: [PATCH] update for 1.11
 
 ---
  Pkgfile                   |   6 +-
- kernel/build/config-arm64 | 169 ++++++++++++++++++++++++++++++--------
+ kernel/build/config-arm64 | 167 ++++++++++++++++++++++++++++++--------
  kernel/prepare/pkg.yaml   |   6 +-
- 3 files changed, 139 insertions(+), 42 deletions(-)
+ 3 files changed, 138 insertions(+), 41 deletions(-)
 
 diff --git a/Pkgfile b/Pkgfile
 index 88e6f64..c35e05b 100644
@@ -27,7 +27,7 @@ index 88e6f64..c35e05b 100644
    # renovate: datasource=git-tags extractVersion=^libaio-(?<version>.*)$ depName=https://pagure.io/libaio.git
    libaio_version: 0.3.113
 diff --git a/kernel/build/config-arm64 b/kernel/build/config-arm64
-index 8776563..8c84eb5 100644
+index 8776563..2559221 100644
 --- a/kernel/build/config-arm64
 +++ b/kernel/build/config-arm64
 @@ -1,10 +1,10 @@
@@ -652,15 +652,6 @@ index 8776563..8c84eb5 100644
  # CONFIG_NVMEM_MESON_MX_EFUSE is not set
  # CONFIG_NVMEM_MTK_EFUSE is not set
  # CONFIG_NVMEM_QCOM_QFPROM is not set
-@@ -9440,7 +9540,7 @@ CONFIG_CRYPTO_LZO=y
- # CONFIG_CRYPTO_842 is not set
- # CONFIG_CRYPTO_LZ4 is not set
- # CONFIG_CRYPTO_LZ4HC is not set
--CONFIG_CRYPTO_ZSTD=y
-+CONFIG_CRYPTO_ZSTD=m
- # end of Compression
- 
- #
 @@ -9613,16 +9713,13 @@ CONFIG_CRYPTO_LIB_GF128MUL=y
  CONFIG_CRYPTO_LIB_BLAKE2S_GENERIC=y
  CONFIG_CRYPTO_ARCH_HAVE_LIB_CHACHA=y
@@ -719,5 +710,5 @@ index 6408110..b507e5d 100644
          cd /src
          make mrproper
 -- 
-2.39.5 (Apple Git-154)
+2.50.1
 

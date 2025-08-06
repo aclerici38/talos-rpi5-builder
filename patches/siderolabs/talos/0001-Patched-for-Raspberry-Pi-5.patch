@@ -1,17 +1,17 @@
-From 2a575c0f13bc7b813b6b24331c3e668dfe4231b2 Mon Sep 17 00:00:00 2001
+From d329699d14aa62667088f09be53a8402da60defb Mon Sep 17 00:00:00 2001
 From: Anthony Clerici <anthony@clerici.me>
 Date: Wed, 6 Aug 2025 11:02:49 -0700
 Subject: [PATCH] llm sabotage, try again
 
 ---
- hack/modules-arm64.txt | 340 +++++++++++++++++++----------------------
- 1 file changed, 160 insertions(+), 180 deletions(-)
+ hack/modules-arm64.txt | 339 +++++++++++++++++++----------------------
+ 1 file changed, 159 insertions(+), 180 deletions(-)
 
 diff --git a/hack/modules-arm64.txt b/hack/modules-arm64.txt
-index f2215167c..95c3ee669 100644
+index f2215167c..fbe9d65c7 100644
 --- a/hack/modules-arm64.txt
 +++ b/hack/modules-arm64.txt
-@@ -1,210 +1,190 @@
+@@ -1,210 +1,189 @@
 +modules.builtin.bin
 +modules.builtin.modinfo
 +modules.builtin.alias.bin
@@ -41,7 +41,6 @@ index f2215167c..95c3ee669 100644
 -kernel/drivers/block/nbd.ko
 +kernel/crypto/blake2b_generic.ko
 +kernel/crypto/xxhash_generic.ko
-+kernel/crypto/zstd.ko
 +kernel/net/ipv4/ip_gre.ko
 +kernel/net/tls/tls.ko
 +kernel/net/openvswitch/vport-gre.ko
@@ -383,5 +382,5 @@ index f2215167c..95c3ee669 100644
 -modules.builtin.modinfo
 -modules.order
 -- 
-2.39.5 (Apple Git-154)
+2.50.1
 
