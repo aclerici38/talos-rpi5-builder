@@ -1,17 +1,17 @@
-From d329699d14aa62667088f09be53a8402da60defb Mon Sep 17 00:00:00 2001
+From 659c0707129ed77d76e088e9408135a51c31271b Mon Sep 17 00:00:00 2001
 From: Anthony Clerici <anthony@clerici.me>
 Date: Wed, 6 Aug 2025 11:02:49 -0700
 Subject: [PATCH] llm sabotage, try again
 
 ---
- hack/modules-arm64.txt | 339 +++++++++++++++++++----------------------
- 1 file changed, 159 insertions(+), 180 deletions(-)
+ hack/modules-arm64.txt | 340 +++++++++++++++++++----------------------
+ 1 file changed, 161 insertions(+), 179 deletions(-)
 
 diff --git a/hack/modules-arm64.txt b/hack/modules-arm64.txt
-index f2215167c..fbe9d65c7 100644
+index f2215167c..0e711bbf3 100644
 --- a/hack/modules-arm64.txt
 +++ b/hack/modules-arm64.txt
-@@ -1,210 +1,189 @@
+@@ -1,210 +1,192 @@
 +modules.builtin.bin
 +modules.builtin.modinfo
 +modules.builtin.alias.bin
@@ -127,9 +127,6 @@ index f2215167c..fbe9d65c7 100644
 -kernel/drivers/mmc/host/sdhci-of-dwcmshc.ko
 -kernel/drivers/mmc/host/sdhci-of-esdhc.ko
 -kernel/drivers/mmc/host/sdhci-pci.ko
--kernel/drivers/mmc/host/sdhci-pltfm.ko
--kernel/drivers/mmc/host/sdhci-tegra.ko
--kernel/drivers/mmc/host/sdhci-xenon-driver.ko
 +kernel/drivers/nvme/host/nvme-rdma.ko
 +kernel/drivers/nvme/target/nvme-loop.ko
 +kernel/drivers/nvme/target/nvmet-fc.ko
@@ -137,6 +134,11 @@ index f2215167c..fbe9d65c7 100644
 +kernel/drivers/nvme/target/nvmet-tcp.ko
 +kernel/drivers/nvme/target/nvmet-rdma.ko
 +kernel/drivers/nvme/common/nvme-auth.ko
++kernel/drivers/nvme/host/nvme.ko
+ kernel/drivers/mmc/host/sdhci-pltfm.ko
+-kernel/drivers/mmc/host/sdhci-tegra.ko
+-kernel/drivers/mmc/host/sdhci-xenon-driver.ko
++kernel/drivers/mmc/host/sdhci-brcmstb.ko
 +kernel/drivers/net/mdio/mdio-mux-meson-gxl.ko
 +kernel/drivers/net/thunderbolt/thunderbolt_net.ko
  kernel/drivers/net/ethernet/amazon/ena/ena.ko
@@ -382,5 +384,5 @@ index f2215167c..fbe9d65c7 100644
 -modules.builtin.modinfo
 -modules.order
 -- 
-2.50.1
+2.39.5 (Apple Git-154)
 
