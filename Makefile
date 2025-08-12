@@ -7,7 +7,7 @@ REGISTRY_USERNAME ?= ant385525
 
 TAG ?= $(shell git describe --tags --exact-match)
 
-EXTENSIONS ?= 'ghcr.io/siderolabs/gvisor:20250707.0@sha256:671a6b5f3f26fc3a7788d8632c8f7d005f9a7e84e2e041649ddb863b0209a7d4'
+EXTENSIONS ?= 'ghcr.io/siderolabs/gvisor:20250707.0'
 
 PKG_REPOSITORY = https://github.com/siderolabs/pkgs.git
 TALOS_REPOSITORY = https://github.com/siderolabs/talos.git
